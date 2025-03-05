@@ -1,20 +1,21 @@
 # Docker image for Continuous Integration
 
 ## Available tags
-- [`6.0` (_Dockerfile_)](https://github.com/vyuldashev/docker-ci-php-node/blob/master/6.0/Dockerfile)
-- [`5.0` (_Dockerfile_)](https://github.com/vyuldashev/docker-ci-php-node/blob/master/5.0/Dockerfile)
-- [`4.0` (_Dockerfile_)](https://github.com/vyuldashev/docker-ci-php-node/blob/master/4.0/Dockerfile)
-- [`3.0` (_Dockerfile_)](https://github.com/vyuldashev/docker-ci-php-node/blob/master/3.0/Dockerfile)
-- [`2.0` (_Dockerfile_)](https://github.com/vyuldashev/docker-ci-php-node/blob/master/2.0/Dockerfile)
-- [`1.0` (_1.0/Dockerfile_)](https://github.com/vyuldashev/docker-ci-php-node/blob/master/1.0/Dockerfile)
+- [`7.0` (_Dockerfile_)](https://github.com/kvfs2k07/nodejs-w-php/blob/master/7.0/Dockerfile)
+- [`6.0` (_Dockerfile_)](https://github.com/kvfs2k07/nodejs-w-php/blob/master/6.0/Dockerfile)
+- [`5.0` (_Dockerfile_)](https://github.com/kvfs2k07/nodejs-w-php/blob/master/5.0/Dockerfile)
+- [`4.0` (_Dockerfile_)](https://github.com/kvfs2k07/nodejs-w-php/blob/master/4.0/Dockerfile)
+- [`3.0` (_Dockerfile_)](https://github.com/kvfs2k07/nodejs-w-php/blob/master/3.0/Dockerfile)
+- [`2.0` (_Dockerfile_)](https://github.com/kvfs2k07/nodejs-w-php/blob/master/2.0/Dockerfile)
+- [`1.0` (_1.0/Dockerfile_)](https://github.com/kvfs2k07/nodejs-w-php/blob/master/1.0/Dockerfile)
 
 ## System information
   * Ubuntu
 
 ## Installed packages
-  * ssh
-  * openssh-client
-  * rsync
+  * ssh (<7.0)
+  * openssh-client (<7.0)
+  * rsync (<7.0)
   * curl
   * wget
   * PHP
@@ -31,7 +32,7 @@
     * bcmath
     * intl
     * imap
-  * Composer
+  * Composer (<7.0)
   * PHPUnit
-  * Node.js 12
-  * npm 6
+  * Node.js 12 (7.0+ = Node.js 20)
+  * npm 6 (7.0+ = npm@latest)
