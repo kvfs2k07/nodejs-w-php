@@ -22,7 +22,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build the Docker images
-        run: 
+        run: |
           pwd
           ls -la
           ./build.sh
