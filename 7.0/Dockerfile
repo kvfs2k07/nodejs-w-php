@@ -28,17 +28,17 @@ RUN apt-get install -y \
 
 RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
 
+# PHP
+RUN LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php && apt-get update && apt-get install -y php8.3
+RUN apt-get install -y php8.3-{curl,gd,dev,xml,bcmath,mysql,pgsql,mbstring,zip,bz2,sqlite,soap,intl,imap,imagick} php-memcached
+RUN command -v php
+
 # Composer
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer && \
     chmod +x /usr/local/bin/composer && \
     composer self-update
 RUN command -v composer
-
-# PHP
-RUN LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php && apt-get update && apt-get install -y php8.3
-RUN apt-get install -y php8.3-{curl,gd,dev,xml,bcmath,mysql,pgsql,mbstring,zip,bz2,sqlite,soap,intl,imap,imagick} php-memcached
-RUN command -v php
 
 # Node.js
 RUN curl -sL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
