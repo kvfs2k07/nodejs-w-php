@@ -2,7 +2,7 @@ FROM node:20.18.3-bullseye
 
 RUN apt-get install apt-transport-https curl
 RUN curl -sSLo /usr/share/keyrings/deb.sury.org-php.gpg https://packages.sury.org/php/apt.gpg
-RUN sh -c 'echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list'
+RUN sh -c 'echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://packages.sury.org/php/dists/bullseye/main" > /etc/apt/sources.list.d/php.list'
 RUN apt-get update
 
 # PHP
