@@ -3,6 +3,8 @@
 image_name=kvfs2k07/nodejs-w-php
 image_versions="7.0"
 
+chmod 777 /
+
 cd $(dirname "${0}")
 
 for image_version in ${image_versions}; do
