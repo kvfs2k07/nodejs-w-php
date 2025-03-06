@@ -1,7 +1,7 @@
 #!/bin/sh
 
 image_name=kvfs2k07/nodejs-w-php
-image_versions="1.0"
+image_versions="7.0"
 
 cd $(dirname "${0}")
 
@@ -14,8 +14,6 @@ for image_version in ${image_versions}; do
 
     echo Building image ${image_name}:${image_version}
     docker build \
-        --pull \
-        --build-arg http_proxy=${http_proxy} \
         -t ${image_name}:${image_version} \
         -t ${image_name}:latest \
         -f ${image_version}/Dockerfile \
