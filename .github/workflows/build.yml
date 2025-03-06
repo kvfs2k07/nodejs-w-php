@@ -23,6 +23,5 @@ jobs:
 
       - name: Build the Docker images
         run: |
-          pwd
-          ls -la
+          sudo chmod 777 build.sh
           ./build.sh
