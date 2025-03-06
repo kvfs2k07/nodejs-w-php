@@ -16,7 +16,6 @@ RUN apt-get install -y \
     zip \
     unzip \
     curl \
-    openssh-client \
     git \
     build-essential \
     apt-utils \
@@ -25,6 +24,8 @@ RUN apt-get install -y \
     libjpeg-dev \
     libpng-dev \
     libpng16-16
+
+RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
 
 # PHP
 RUN LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php && apt-get update && apt-get install -y php8.3
