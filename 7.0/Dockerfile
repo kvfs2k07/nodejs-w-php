@@ -1,7 +1,5 @@
 FROM ghcr.io/parkervcp/yolks:nodejs_20
 
-RUN LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php && apt-get update && apt-get install -y php8.3
-
 # PHP
 RUN apt-get install -y php8.3
 RUN apt-get install -y php8.3-{curl,gd,dev,xml,bcmath,mysql,pgsql,mbstring,zip,bz2,sqlite,soap,intl,imap,imagick} php-memcached
