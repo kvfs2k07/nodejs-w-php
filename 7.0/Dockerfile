@@ -1,9 +1,6 @@
-FROM node:20.18.3-bullseye
+FROM ghcr.io/parkervcp/yolks:nodejs_20
 
-RUN apt-get install apt-transport-https curl
-RUN curl -sSLo /usr/share/keyrings/deb.sury.org-php.gpg https://packages.sury.org/php/apt.gpg
-RUN sh -c 'echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://packages.sury.org/php/dists/bullseye/main" > /etc/apt/sources.list.d/php.list'
-RUN apt-get update
+RUN LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php && apt-get update && apt-get install -y php8.3
 
 # PHP
 RUN apt-get install -y php8.3
